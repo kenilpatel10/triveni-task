@@ -1,46 +1,101 @@
 <div class="container mt-4">
-    <form [FormGroup]="this.empForm" (ngSubmit)="addEmploye()">
+    <form [formGroup]="empForm" >
         <div class="form-row">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-4">
             <label for="inputEmail4">FirstName</label>
             <input type="text" class="form-control" formControlName="FirstName"  placeholder="FirstName">
           </div>
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-4">
             <label for="inputEmail4">LastName</label>
             <input type="text" class="form-control" formControlName="LastName" placeholder="LastName">
           </div>
-         
+          <div class="form-group col-md-4">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" formControlName="Email" placeholder="Email">
+          </div>
         </div>
+        <label class="form-check-label mb-2" for="defaultCheck1">Gender</label>
+        <div class="form-row ">
+          <div class="form-check col-md-2 mx-4 mb-2 ">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Male
+            </label>
+          </div>
+          <div class="form-check col-md-2">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+           Female
+            </label>
+          </div>
+        </div>
+        
+        <label class="form-check-label" for="defaultCheck1">Marital Status</label>
+        <div class="form-row">
+    
+        <div class="form-check  col-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Single
+          </label>
+        </div><div class="form-check  col-md-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+          Married
+          </label>
+        </div>
+        </div>
+        <div class="form-group">
+           <label class="form-check-label mb-2" for="defaultCheck1">BirthDate</label>
+          <input class="form-control " type="date" id="myDate" name="bday" min="1980-01-01" max="2003-01-01">
+        </div>
+       
+      //hobiiiess multi
+      //photto
+      //salary
+      //
         <div class="form-group">
           <label for="inputAddress">Address</label>
           <input type="text" class="form-control" formControlName="Address" placeholder="1234 Main St">
         </div>
        
         <div class="form-row">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-3">
             <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control"  formControlName="City" id="inputCity">
           </div>
-          <div class="form-group col-md-4">
+
+
+
+          <div class="form-group col-md-3">
             <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
+            <select id="inputState" class="form-control"  formControlName="State">
               <option selected>Choose...</option>
-              <option>...</option>
+              <option>GJ</option>
+              <option>Up</option>
+              <option>Mp</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
+          <div class="form-group col-md-3">
+            <label for="inputState">Country</label>
+            <select id="inputState" class="form-control"  formControlName="Country">
+              <option selected>Choose...</option>
+              <option>IND</option>
+              <option>UK</option>
+              <option>NZ</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
             <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
+            <input type="number" class="form-control" id="inputZip" formControlName="ZipCode">
           </div>
         </div>
         <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
+          <div class="form-group">
+            <label for="inputAddress">Password</label>
+            <input type="text" class="form-control" formControlName="Password" placeholder="Password">
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Create Employee</button>
       </form>
 </div>
